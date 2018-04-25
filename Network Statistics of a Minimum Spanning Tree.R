@@ -22,7 +22,7 @@ write.csv(links, file="links.csv")                      #Save the table CSV file
 library(igraph)
 nodes=links[1:199,]                                 #A vector of the vertices
 mst1=mst(graph_from_data_frame(d=links,             #Creates a non directed Minimum Spanning Three called mst1 by using Prim algorithm
-                               vertices=nodes, directed=F))    #With links in "links" vector, the vertices in "nodes" vector 
+                    vertices=nodes, directed=F))    #With links in "links" vector, the vertices in "nodes" vector 
 MST=as_data_frame(mst1)                             #Creates a table of three columns of the mst1
 write.csv(MST,  file="MST.csv")                     #Save the table as CSV file
 
